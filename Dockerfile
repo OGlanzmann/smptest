@@ -11,7 +11,7 @@ COPY ./smp-webapp/mysql-connector-java-5.1.48-bin.jar /usr/local/tomcat/lib/mysq
 COPY ./smp-webapp/sample_signatures_keystore.jks /usr/local/tomcat/smp/keystores/sample_signatures_keystore.jks
 
 RUN ["rm", "-fr", "/usr/local/tomcat/webapps/ROOT"]
-COPY ./smp-webapp/smp.war /usr/local/tomcat/webapps/ROOT.war
+COPY ./smp-webapp/smp-4.1.0.war /usr/local/tomcat/webapps/ROOT.war
 
 ENV CLASSPATH=/usr/local/tomcat/smp
 

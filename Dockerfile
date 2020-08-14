@@ -3,7 +3,8 @@ MAINTAINER Digg
 
 RUN mkdir /usr/local/tomcat/smp
 RUN mkdir /usr/local/tomcat/smp/keystores
-COPY ./smp-webapp/smp.config.properties /usr/local/tomcat/smp/smp.config.properties
+RUN mkdir /usr/local/tomcat/smp/conf
+COPY ./smp-webapp/smp.config.properties /usr/local/tomcat/smp/conf/smp.config.properties
 
 COPY ./smp-webapp/mysql-connector-java-5.1.48-bin.jar /usr/local/tomcat/lib/mysql-connector-java-5.1.48-bin.jar
 

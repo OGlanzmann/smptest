@@ -15,5 +15,5 @@ RUN ["rm", "-fr", "/usr/local/tomcat/webapps/ROOT"]
 COPY ./smp-webapp/smp-4.1.0.war /usr/local/tomcat/webapps/ROOT.war
 
 ENV CLASSPATH=/usr/local/tomcat/smp/conf
-
+ENV JAVA_OPTS="${JAVA_OPTS} -Dsmp.config.properties=/usr/local/tomcat/smp/conf"
 CMD ["catalina.sh", "run"]

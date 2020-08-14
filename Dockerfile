@@ -1,7 +1,7 @@
 FROM tomcat:8-jdk8
 MAINTAINER Digg
 RUN apt-get update
-RUN apt-get install mysql-client
+RUN apt-get install mysql
 RUN mkdir /usr/local/tomcat/smp
 RUN mkdir /usr/local/tomcat/smp/keystores
 RUN mkdir /usr/local/tomcat/smp/conf

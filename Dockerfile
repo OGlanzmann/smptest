@@ -14,6 +14,6 @@ COPY ./smp-webapp/sample_signatures_keystore.jks /usr/local/tomcat/smp/keystores
 RUN ["rm", "-fr", "/usr/local/tomcat/webapps/ROOT"]
 COPY ./smp-webapp/smp-4.1.0.war /usr/local/tomcat/webapps/ROOT.war
 
-ENV CLASSPATH=/usr/local/tomcat/smp
+ENV CLASSPATH=/usr/local/tomcat/smp/conf
 
 CMD ["catalina.sh", "run"]

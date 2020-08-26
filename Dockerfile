@@ -15,14 +15,13 @@ COPY ./smp-webapp/mysql-connector-java-5.1.45-bin.jar /usr/local/tomcat/lib/mysq
 # TODO: Make sure this lives in a persistent volume in production and test
 COPY ./smp-webapp/sample_signatures_keystore.jks /usr/local/tomcat/smp/keystores/sample_signatures_keystore.jks
 
-RUN chmod -R 711 /usr/local/tomcat/smp
+RUN chmod -R 755 /usr/local/tomcat/smp
 
 RUN ["rm", "-fr", "/usr/local/tomcat/webapps/ROOT"]
 COPY ./smp-webapp/smp-4.1.0.war /usr/local/tomcat/webapps/ROOT.war
 
 #ENV CLASSPATH=${CLASSPATH} /usr/local/tomcat/smp/conf
 #ENV JAVA_OPTS="${JAVA_OPTS} -Dsmp.config.properties=/usr/local/tomcat/smp/conf"
-ENV CATALINA_OPTS="-Dorg.apache.tomcat.util.digester.PROPERTY_SOURCE=org.apache.tomcat.util.digester.EnvironmentPropertySource"
 
 ENV SMP_DB_NAME="smp_schema"
 ENV SMP_DB_HOST="mysql"

@@ -6,4 +6,5 @@ export JAVA_OPTS="$JAVA_OPTS -Dsmp.config.properties=$CATALINA_HOME/smp/conf"
 # where the smp ‘smp.config.properties’ is located
 export CLASSPATH=$CATALINA_HOME/smp/conf
 
-CATALINA_OPTS="-Djava.net.preferIPv4Stack=true"
+CATALINA_OPTS="-Djava.net.preferIPv4Stack=true -Dorg.apache.tomcat.util.digester.PROPERTY_SOURCE=org.apache.tomcat.util.digester.EnvironmentPropertySource"
+

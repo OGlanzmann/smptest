@@ -6,7 +6,7 @@ RUN mkdir /usr/local/tomcat/smp/keystores
 RUN mkdir /usr/local/tomcat/smp/conf
 
 COPY ./smp-webapp/smp.config.properties /usr/local/tomcat/smp/conf/smp.config.properties
-#COPY ./smp-webapp/hibernate.properties /usr/local/tomcat/smp/conf/hibernate.properties
+COPY ./smp-webapp/hibernate.properties /usr/local/tomcat/smp/conf/hibernate.properties
 
 COPY ./smp-webapp/setenv.sh /usr/local/tomcat/bin/setenv.sh
 

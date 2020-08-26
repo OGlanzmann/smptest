@@ -10,7 +10,7 @@ COPY ./smp-webapp/hibernate.properties /usr/local/tomcat/smp/conf/hibernate.prop
 
 COPY ./smp-webapp/setenv.sh /usr/local/tomcat/bin/setenv.sh
 
-COPY ./smp-webapp/mysql-connector-java-5.1.45-bin.jar /usr/local/tomcat/lib/mysql-connector-java-5.1.45-bin.jar
+COPY ./smp-webapp/mysql-connector-java-8.0.21.jar /usr/local/tomcat/lib/mysql-connector-java-8.0.21.jar
 
 # TODO: Make sure this lives in a persistent volume in production and test
 COPY ./smp-webapp/sample_signatures_keystore.jks /usr/local/tomcat/smp/keystores/sample_signatures_keystore.jks

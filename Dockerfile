@@ -15,6 +15,7 @@ COPY ./smp-webapp/mysql-connector-java-8.0.21.jar /usr/local/tomcat/lib/mysql-co
 # TODO: Make sure this lives in a persistent volume in production and test
 COPY ./smp-webapp/sample_signatures_keystore.jks /usr/local/tomcat/smp/keystores/sample_signatures_keystore.jks
 COPY ./smp-webapp/sample_signatures_keystore.jks /usr/local/tomcat/smp/keystores/smp_01_test_keystore.jks
+COPY ./smp-webapp/sample_keystore.jks /usr/local/tomcat/smp/keystores/smp-keystore.jks
 
 RUN chmod -R 777 /usr/local/tomcat/smp
 
